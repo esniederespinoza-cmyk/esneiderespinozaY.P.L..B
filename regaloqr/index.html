@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceso Especial 💖</title>
+<link rel="stylesheet" href="vista.css">
+</head>
+
+<body class="pantallaInicio">
+
+<div class="carta">
+  <h1>💖 Acceso Secreto 💖</h1>
+  <p>Ingresa nuestra fecha especial</p>
+
+  <input type="password" id="clave" placeholder="Aniversario dia + de + mes ">
+  <br>
+  <button onclick="entrar()">Entrar</button>
+</div>
+
+<script>
+function entrar() {
+  let clave = document.getElementById("clave").value;
+
+  if (clave === "12 de mayo" || clave === "12/05") {
+      window.location.href = "mensaje.html";
+  } else {
+      alert("❌ Esa no es nuestra fecha");
+  }
+}
+</script>
+
+</body>
+</html>

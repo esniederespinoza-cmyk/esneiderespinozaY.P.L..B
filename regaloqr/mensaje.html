@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti ❤️</title>
+<link rel="stylesheet" href="vista.css">
+</head>
+<body>
+
+<!-- VIDEO DE FONDO -->
+<video autoplay muted loop id="videoFondo">
+  <source src="WhatsApp Video 2026-02-10 at 10.24.53 PM.mp4" type="video/mp4">
+</video>
+
+<div class="carta">
+
+<h1>Feliz 14 de Febrero ❤️</h1>
+
+<h2>💞 Días juntos 274 💞</h2>
+<p id="274"></p>
+
+<div id="mensajePrincipal">
+
+<p>
+No ha sido fácil todo lo que estamos viviendo.
+Sabemos que existen diferencias, que hay miedos
+y que por ahora tus padres no confían en mí
+por la diferencia de edad y por las complicaciones
+de estar juntos.
+</p>
+
+<p>
+Pero yo creo que todo es cuestión de tiempo.
+Esperar el momento indicado.
+Demostrar con hechos quién soy
+y cuánto te quiero.
+Más que aceptación, deseo que confíen en mí.
+</p>
+
+<p>
+Es la primera vez que hago algo así…
+debo confesar que me ayudé un poquito con ChatGPT 😅,
+pero el esfuerzo vale la pena
+cuando es por la persona indicada.
+</p>
+ <p>Posdata: 
+    Es la primera vez que hago esto y a la primera que le doy un regalo tan hermoso como 
+    el que te acabo de dar ajajaj te amo
+
+ </p>
+</div>
+
+<button onclick="mostrarMas()">Leer más 💌</button>
+
+<div id="mensajeExtra" style="display:none;">
+
+<p>
+Ya me has hecho feliz antes,
+con la manera en que pones atención,
+con tu forma tan única de querer
+y con lo hermosa que eres siendo tú misma.
+Me gusta todo de ti.
+</p>
+
+<p>
+Y aunque sabemos cómo somos
+y que no siempre podemos estar a solas 😂,
+solo puedo decir una cosa con certeza:
+</p>
+
+<h2>TE AMO MUCHÍSIMO ❤️</h2>
+
+<img src="vida.jpeg" alt="Imagen de nosotros" class="imagen">
+
+</div>
+
+</div>
+
+<!-- MUSICA -->
+<audio autoplay loop>
+  <source src="WhatsApp Audio 2026-02-10 at 10.30.50 PM.mpeg" type="audio/mpeg">
+</audio>
+
+<script>
+// CONTADOR DE DIAS
+const fechaInicio = new Date("2024-05-12"); // CAMBIA ESTA FECHA
+const hoy = new Date();
+const diferencia = hoy - fechaInicio;
+const diasJuntos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+document.getElementById("dias").innerHTML =
+"Llevamos " + diasJuntos + " días juntos ❤️";
+
+// BOTON LEER MAS
+function mostrarMas(){
+  document.getElementById("mensajeExtra").style.display = "block";
+}
+
+// CORAZONES
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 400);
+
+</script>
+
+</body>
+</html>
