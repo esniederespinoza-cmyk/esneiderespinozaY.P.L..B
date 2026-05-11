@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- AGREGA ESTO EN LOS DOS HTML DENTRO DEL <head> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- PARA QUE IOS Y ANDROID LO VEAN BIEN -->
+<meta name="theme-color" content="#ff758c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Para Ti ❤️</title>
+<link rel="stylesheet" href="vista.css">
+</head>
+<body>
+
+<!-- VIDEO DE FONDO -->
+ <video src="milo.mp4" autoplay muted loop id="videoFondo"></video>
+  <audio id="musicaInicio" src="M.A.I.mpeg" autoplay loop></audio>
+
+</video>
+  <div class="hearts" aria-hidden="true">
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+    <span class="heart">💕</span>
+    <span class="heart">💘</span>
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+    <span class="heart">💕</span>
+  </div>
+<div class="carta">
+
+<h1>Feliz aniversario, corazón ❤️</h1>
+
+<h2>💞 Días juntos: 364 💞</h2>
+
+<div id="mensajePrincipal">
+
+<p>
+A pesar de todo por lo que estamos pasando con la distancia,
+que me mantiene lejos de ti, al saber que tu familia no me quiere
+nada y que han difamado de una manera tan fea que no puedo ni defenderme,
+si tan solo me conocieran un poquito más, se darían cuenta de que no soy tan malo
+como las otras personas dicen de mí. No he sido el mejor novio del mundo,
+pero tampoco soy el peor. Me he esforzado para ser el mejor para ti.
+</p>
+
+<p>
+Pero yo creo que todo es cuestión de tiempo.
+Esperar el momento indicado.
+Demostrar con hechos quién soy
+y cuánto te quiero.
+Más que aceptación, deseo que confíen en mí.
+</p>
+
+<p>
+Quiero que sepas que eres mi persona favorita, la que siempre saca una sonrisa en mis
+momentos más difíciles, la que me hace sentir amado. Hace 1 año y un poquito más te quise rechazar
+por la diferencia de edad que mantenemos, pero tú me has demostrado que eso no es nada
+cuando se decide querer a una persona como tú.
+</p>
+
+<p>
+Posdata:
+No estás gorda, amor. Te amo tal como eres.
+</p>
+
+<p>
+Posdata 2:<br><br>
+
+Don López y Doña Bernal, sé que es difícil saber si los rumores que dicen de mí son verdad,
+pero la única forma de aclararlo es conociéndome. Aquí voy a decir unas cosas sobre mí,
+aunque estoy seguro de que no es de su interés.
+
+<br><br>
+
+- Soy Esneider Espinoza.<br>
+- Tengo 18 años. Lo sé, muy mayor para su niña, pero como lo he dicho, estoy dispuesto a esperar.<br>
+- Soy un chico algo romántico, me gusta demostrar con hechos y no solo con palabras, aunque me dé miedo acercarme a ustedes.<br>
+- Hago deporte, me gusta jugar ecuavóley.<br>
+- Tuve un hermano, pero falleció hace más de 14 años; es decir, soy hijo único. Ese sentimiento de soledad me hizo acercarme mucho a su niña.<br>
+- No tengo vicios, no fumo ni bebo, no me agrada el alcohol.<br>
+- Ahorita que ando viviendo solo otra vez, trabajo y estudio para alivianar la carga de mis padres.<br>
+- He trabajado en casi todo: soy eléctrico y ayudante de maestro, mejor dicho, albañil.<br>
+- Y ando estudiando en Ibarra, sacando mi título de Tecnología en Electrónica. Pienso seguir otra carrera como Electricidad.<br>
+- Sé que no me tienen ni un poquito de aprecio hacia mi persona, pero yo sé que es porque aún no me conocen bien.<br>
+- Ojalá con esto que les acabo de decir se den cuenta de que no soy tan mala persona como otra gente dice de mí.<br><br>
+Gracias por su antención y disculpe si le hize perder el timpo leyendo esto. <br>
+
+ESPERARÉ SI ES NECESARIO. NO PUEDO DEJAR ATRÁS A UNA PERSONA QUE ME HACE FELIZ EN MIS MOMENTOS DE SOLEDAD.
+</p>
+
+</div>
+
+<button onclick="mostrarMas()">Leer más 💌</button>
+<!-- BOTÓN -->
+<button onclick="irAVideoFinal()">
+  Tus compartidos AJAJA
+</button>
+<script>
+
+// AUDIO
+const musica =
+document.getElementById("musicaInicio");
+
+// BOTÓN FINAL
+function irAVideoFinal() {
+
+  // APAGAR MÚSICA
+  musica.pause();
+
+  musica.currentTime = 0;
+
+  // IR A OTRA PÁGINA
+  window.location.href =
+  "final.html";
+}
+
+</script>
+
+<script>
+  const fechaInicio = new Date("2024-05-12");
+  const hoy = new Date();
+  const diferencia = hoy - fechaInicio;
+  const diasJuntos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+  document.getElementById("dias").innerHTML =
+    "Llevamos " + diasJuntos + " días juntos ❤️";
+</script>
+
+<div id="mensajeExtra" style="display:none;">
+
+<p>
+Ya me has hecho feliz antes,
+con la manera en que pones atención,
+con tu forma tan única de querer
+y con lo hermosa que eres siendo tú misma.
+Me gusta todo de ti.
+</p>
+
+<p>
+Pase lo que pase, yo estaré aquí para ti.
+No importa lo que digan los demás de mí,
+solo importa lo que tú pienses de mí
+y lo que yo piense de ti.
+</p>
+
+<h2>TE QUiERO MUCHÍSIMO ❤️</h2>
+
+<img src="vida.jpeg" alt="Imagen de ella" class="imagen">
+</div>
+<img src="yo.jpeg" alt="Imagen de yo" class="imagen">
+</div>
+
+<script>
+  document.querySelectorAll('audio').forEach(audio => audio.volume = 0.10);
+
+
+document.getElementById("dias").innerHTML =
+"Llevamos " + diasJuntos + " días juntos ❤️";
+
+// BOTÓN LEER MÁS
+function mostrarMas() {
+  document.getElementById("mensajeExtra").style.display = "block";
+}
+function irAVideoFinal() {
+  musica.pause();
+  musica.currentTime = 0;
+  window.location.href = "unomas.html";
+}
+
+// CORAZONES
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}, 400);
+
+</script>
+
+</body>
+</html>
