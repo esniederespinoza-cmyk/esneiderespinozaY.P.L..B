@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- AGREGA ESTO EN LOS DOS HTML DENTRO DEL <head> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- PARA QUE IOS Y ANDROID LO VEAN BIEN -->
+<meta name="theme-color" content="#ff758c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Acceso Especial 💖</title>
+<link rel="stylesheet" href="vista.css">
+</head>
+
+<body class="pantallaInicio">
+  <video src="can.mp4" autoplay muted loop id="videoFondo"></video>
+  <audio id="musicaInicio" src="musics.mpeg" autoplay loop></audio> 
+
+  <script>
+    document.querySelectorAll('audio').forEach(audio => audio.volume = 0.25);
+  </script>
+
+  <div class="hearts" aria-hidden="true">
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+    <span class="heart">💕</span>
+    <span class="heart">💘</span>
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+    <span class="heart">💕</span>
+  </div>
+
+<div class="carta">
+  <h1>💖 Acceso Secreto 💖</h1>
+  <p>Ingresa nuestra fecha especial</p>
+  <p>
+    No me estafaron el patron si llego.
+  </p>
+
+  <input type="password" id="clave" placeholder="Aniversario dia + de + mes ">
+  <br>
+  <button onclick="entrar()">Entrar</button>
+</div>
+
+<script>
+function entrar() {
+  let clave = document.getElementById("clave").value;
+
+  if (clave === "12 de mayo" || clave === "12/05") {
+      window.location.href = "mensaje.html";
+  } else {
+      alert("❌ Esa no es nuestra fecha");
+  }
+}
+</script>
+
+</body>
+</html>
